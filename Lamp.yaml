@@ -1,0 +1,11 @@
+---
+- name: Installing LAMP on ubuntu
+  hosts: testservers
+  become: yes
+  tasks:
+    -name: install apache2 and update
+    apt:
+      name: apache2
+      update_cahce: yes
+      state: present
+
